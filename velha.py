@@ -136,13 +136,13 @@ def jogar():
 jogando = True
 CONTRA_COMPUTADOR = False
 while jogando:
-    CONTRA_COMPUTADOR = str(input('Quer jogar contra computador? (Y/N): ')) == 'Y' #está pedindo no começo do jogo se o user quer jogar contra o computador ou nao
+    CONTRA_COMPUTADOR = str(input('Quer jogar contra computador? (Y/N): ')).upper() == 'Y' #está pedindo no começo do jogo se o user quer jogar contra o computador ou nao
     if CONTRA_COMPUTADOR:
         print ('Informe o nome dos jogadores') #pedindo nome dos jogadores
         jogador1= input('Digite o nome do jogador(x): ') 
     else:
         print ('Informe o nome dos jogadores')
-        jogador1= input('Digite o nome do jogador 1(x): ') #está pedindo o nome dos jogadores
+        jogador1= input('Digite o nome do jogador 1(X): ') #está pedindo o nome dos jogadores
         jogador2 = input('Digite o nome do jogador 2(O): ')
 
     while not deu_velha(c1, c2, c3, c4, c5, c6, c7, c8, c9) and \
@@ -160,7 +160,7 @@ while jogando:
         else:
             print("Deu velha...") #deu velha,ou seja todas as casas sao diferentes.
 
-        jogando  = input('Quer continuar jogando? (Y/N): ') == 'Y' #está pedindo se o jogador vai querer continuar ou nao.
+        jogando  = input('Quer continuar jogando? (Y/N): ').upper() == 'Y' #está pedindo se o jogador vai querer continuar ou nao.
         if jogando:
             vez =  'X'
             j =''
@@ -174,4 +174,4 @@ while jogando:
             c8 = '8'
             c9 = '9'
         else:
-            print('Obrigado por jogar!!') #se o jogador digitou 'N' printou esta mensagem.
+            print('Obrigado por jogar!!') #se o jogador digitou 'N' printou esta mensagem.y
